@@ -45,6 +45,15 @@ if __name__ == '__main__':
             point.z = 0.1
             m.points.append(point)
             m.colors.append(line_color)
+        # Add first point again
+        vertex = poly[0]
+        point = Point()
+        point.x = vertex[0]
+        point.y = vertex[1]
+        point.z = 0.1
+        m.points.append(point)
+        m.colors.append(line_color)
+            
         markers.markers.append(m)
 
     pub.publish(markers)
